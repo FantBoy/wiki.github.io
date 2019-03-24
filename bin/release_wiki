@@ -1,0 +1,8 @@
+#!/bin/sh
+cd /home/bearboyxu/MyBlogFactory/wiki.github.io/
+rm -rf site
+
+mkdocs build
+
+rm -R /usr/share/nginx/wiki/*
+cp -R /home/bearboyxu/MyBlogFactory/wiki.github.io/site/* /usr/share/nginx/wiki/
