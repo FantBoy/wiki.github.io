@@ -4,9 +4,9 @@ repo_url: https://github.com/FantBoy/wiki.github.io
 
 theme:
   name: material
-  #palette:
-  #  primary: 'Blue Grey'
-  #  accent: 'Pink'
+  palette:
+    primary: 'Indigo'
+    accent: 'Pink'
   feature:
     tabs: true 
   #font:
