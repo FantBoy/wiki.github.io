@@ -1,8 +1,68 @@
 site_name: Bearboy's wiki
-repo_name:
-repo_url:
+repo_name: wiki.github.io
+repo_url: https://github.com/FantBoy/wiki.github.io
+
 theme:
-    name: 'material'
+  name: material
+  #palette:
+  #  primary: 'Blue Grey'
+  #  accent: 'Pink'
+  feature:
+    tabs: true 
+  #font:
+  #  #text: 'Ubuntu'
+  #  #code: 'Ubuntu Mono'
+  #  language: 'zh'
+
 markdown_extensions:
-    - admonition
-    - codehilite
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+
+nav:
+  - Nginx:
+      - 1. uwsgi+django部署: Nginx/nginx_gunicorn_django_setting.md
+      - 2. server_names_hash_bucket: Nginx/nginx_server_names_hash.md
+      - 3. gunicorn+django部署: Nginx/nginx_gunicorn_django_setting.md
+  - MySQL:
+      - 1. 获取字段名: MySQL/mysql_get_items_name_of_tables.md
+  - Linux:
+      - 1. cp覆盖拷贝: Linux/cp_cover.md
+      - 2. curl:
+          - 分析Http请求耗时: Linux/Curl指令分析Http请求耗时.md
+      - 3. 查询外网ip: Linux/Linux_get_external_network_ip.md
+      - 4. 压缩包的分割与合并: Linux/linux_split_tar_and_untar.md
+  - Git:
+      - 1. 基础命令: Git/git_common_commands.md
+  - Python:
+      - 1. 类的属性管理: Python/class-property.md
+      - 2. 常量类: Python/constants_class.md
+      - 3. Django:
+          - 为model添加自动化log: Python/Django/django-model-log.md
+  - Tools:
+      - 1. Jetbrains:
+          - activation-code: Tools/Jetbrains/jetbrains-activation-code.md
+          - phpstorm-keyboard: Tools/Jetbrains/phpstorm-keyboard.md
+      - 2. Anaconda:
+          - Mac下的包管理: Tools/Anaconda/mac-anaconda-包管理.md
+
