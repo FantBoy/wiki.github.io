@@ -1,26 +1,16 @@
----
-title: mac下anaconda包管理
-date: 2018-01-18 21:40
-toc: true
-categories: Jetbrains
-comments: true
----
+!!! info
+    Anaconda利用conda命令来进行package和environment的管理，其包含了Python和相关的配套工具。 
 
-{%alert info%}
-
-Anaconda利用conda命令来进行package和environment的管理，其包含了Python和相关的配套工具。 
-
-{%endalert%}
 
 ## conda常用命令
 
-```
+``` shell
 # 查看已经安装的packages
 # 最新版的conda是从site-packages文件夹中搜索已经安装的包，不依赖于pip
 conda list
 ```
 
-```
+``` shell
 # 查看当前环境下已安装的包
 conda list
 
@@ -55,7 +45,7 @@ conda update python
 
 ## 添加国内镜像
 
-```
+``` shell
 # 添加Anaconda的TUNA镜像
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 
@@ -67,7 +57,7 @@ conda config --set show_channel_urls yes123456
 
 ### mac安装MySQLdb
 
-```
+``` shell
 conda install pymysql #有可能会失败，更推荐后者
 pip install MySQL-python
 ```

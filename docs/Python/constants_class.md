@@ -1,15 +1,4 @@
----
-title: 常量的管理类
-date: 2017-04-17 17:00:00 +09:00
-toc: true
-categories: 编写高质量python代码
-comments: true
----
-
-{%alert success %}
-<p></p>
-在多进程系统或者复杂的逻辑任务中，往往需要统一管理`constance`常量。而`Python`语言本身并没有提供const，所以就需要开发者自己来实现。
-{%endalert%}
+> 在多进程系统或者复杂的逻辑任务中，往往需要统一管理`constance`常量。而`Python`语言本身并没有提供const，所以就需要开发者自己来实现。
 
 
 ## 定义_constance常量管理类
@@ -37,15 +26,15 @@ class _constance(object):
 sys.modules[__name__] = _constance()  #__name__ = 'Constants'
 ```
 
- - 使用`sys.modules[name]`可以获取一个模块对象，并可以通过该对象获取模块的属性
+!!! tip
+     - 使用`sys.modules[name]`可以获取一个模块对象，并可以通过该对象获取模块的属性
 
- - 使用了`sys.modules`向系统字典中注入了一个`_constance对象`从而实现了在执行`import name`时实际获取了一个`_constance实例`的功能
+     - 使用了`sys.modules`向系统字典中注入了一个`_constance对象`从而实现了在执行`import name`时实际获取了一个`_constance实例`的功能
 
-{% alert info %}
-`sys.module`在文档中的描述如下:
-<p></p>
- - This is a dictionary that maps module names to modules which have already been loaded. This can be manipulated to force reloading of modules and other tricks. Note that removing a module from this dictionary is not the same as calling reload() on the corresponding module object.
-{% endalert %}
+
+!!! info "`sys.module`在文档中的描述如下:"
+    <p></p>
+     - This is a dictionary that maps module names to modules which have already been loaded. This can be manipulated to force reloading of modules and other tricks. Note that removing a module from this dictionary is not the same as calling reload() on the corresponding module object.
 
 
 ## 常量类_constance的使用
@@ -77,4 +66,5 @@ Constance.ConstError: const.key[CFS_PATH_DIR] is exists!
   - from module import xxx需要将module解释后加载至内存中，再将相应部分加入目标文件的局部字典中
   - python模块中的代码仅在首次被import时被执行一次
 
-> `import Constance`时，发生了`sys.modules[__name__] = _constance()`，此时，`Constance`模块已经加载进了内存，系统字典中也已经有了Constance对象，所以，就可以直接使用Constance实例了。
+!!! info
+    `import Constance`时，发生了`sys.modules[__name__] = _constance()`，此时，`Constance`模块已经加载进了内存，系统字典中也已经有了Constance对象，所以，就可以直接使用Constance实例了。

@@ -1,29 +1,19 @@
----
-title: Curl分析Http请求耗时 
-date: 2018-01-23 22:10
-toc: true
-categories: Linux指令
-comments: true
----
-
-{%alert info%}
-
-实际开发中，经常遇到网络请求时延比较高的情况，在分析请求耗时分布的时候，Curl有一个特别有用的功能：测试请求的耗时分布。
+> 实际开发中，经常遇到网络请求时延比较高的情况，在分析请求耗时分布的时候，Curl有一个特别有用的功能：测试请求的耗时分布。
 可以测试本地请求，也可以测试网络请求。
 
-{%endalert%}
 
-## curl参数说明
-```
-[root@VM_196_194_centos _posts]# curl --help
- -w, --write-out FORMAT  What to output after completion
-     --xattr        Store metadata in extended file attributes
-```
-`-w`参数能够按照我们指定的格式，打印curl请求的相关信息。包括status_code 、 local_port 、 size_download 等重要信息。
+!!! info " curl参数说明"
+    ``` shell
+    [root@VM_196_194_centos _posts]# curl --help
+     -w, --write-out FORMAT  What to output after completion
+         --xattr        Store metadata in extended file attributes
+    ```
+    `-w`参数能够按照我们指定的格式，打印curl请求的相关信息。包括status_code 、 local_port 、 size_download 等重要信息。
+
 
 ## 打印网络请求耗时相关的变量
 创建文件 curl-format.txt
-```
+``` yaml
 time_namelookup: %{time_namelookup}\n 
 time_connect: %{time_connect}\n  
 time_appconnect: %{time_appconnect}\n  

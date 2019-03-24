@@ -1,16 +1,5 @@
----
-title: nginx+uwsgi+django部署
-date: 2017-04-02 20:57:00 +09:00
-toc: true
-categories: Nginx
-comments: true
----
-
-{%alert success%}
-<p></p>
-这里省略掉nginx、uwsgi和django的安装部分，直接讲三者的部署
-
-{%endalert%}
+!!! info
+    这里省略掉nginx、uwsgi和django的安装部分，直接讲三者的部署
 
 ## django的部署
 在django项目的根目录编写用于uwsgi启动的配置文件uwsgi.ini
@@ -57,7 +46,7 @@ daemonize        = true                            # true or filepath. eg:/tmp/c
 - -d /var/log/uwsgi.log  后台运行uwsgi并把日志写到/var/log/uwsgi.log里面
 
 ```
-[root@VM_196_194_centos WechatServer]# /usr/local/server/uwsgi/uwsgi --ini uwsgi.ini
+[root@WechatServer]# /usr/local/server/uwsgi/uwsgi --ini uwsgi.ini
 ```
 
 ## nginx配置

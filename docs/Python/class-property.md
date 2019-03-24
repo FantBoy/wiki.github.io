@@ -1,16 +1,4 @@
----
-title: 类的属性管理
-date: 2017-11-18 15:18
-toc: true
-categories: 编写高质量python代码
-comments: true
----
-
-
-{%alert success %}
-<p></p>
-我们在定义一些基础类的时候，往往会有一些参数代表了这个类的属性，而这些属性我们不希望直接暴露给类对象，并且在类对象修改类属性值的时候，能够做参数校验。类的属性管理在这里就显得很重要。python提供了`@property` 属性装饰器来装饰类属性，使类的属性管理变得极为简单。`@property`可以让调用者写出简短的代码，又能很好的保证对参数进行必要的检查。
-{%endalert%}
+> 我们在定义一些基础类的时候，往往会有一些参数代表了这个类的属性，而这些属性我们不希望直接暴露给类对象，并且在类对象修改类属性值的时候，能够做参数校验。类的属性管理在这里就显得很重要。python提供了`@property` 属性装饰器来装饰类属性，使类的属性管理变得极为简单。`@property`可以让调用者写出简短的代码，又能很好的保证对参数进行必要的检查。
 
 
 
@@ -20,7 +8,7 @@ comments: true
 
 Python为我们提供了**属性函数(property)**来设置类属性，property实际上是一个装饰器，使用极为方便。
 
-```
+``` python
 class UserItem(object):
     @property
     def name(self):
@@ -38,7 +26,8 @@ class UserItem(object):
 
 当类对象想要设置属性值时，我们可以进行数据校验，甚至是拒绝修改，实现属性的只读。
 
-```
+``` python
+
 class UserItem(object):
     @name.setter
     def name(self, name):
@@ -50,18 +39,18 @@ class UserItem(object):
         if not isinstance(name, unicode):
             raise ValueError('name must be a string')
         self._name = name
+
 ```
 
 跟添加属性类似，使用 {func_name}.setter 作为属性的装饰器，当类对象试图修改类属性值的时候，会走到该逻辑，对待修改的值进行数据校验和赋值。
 
-{% textcolor primary %}
-如果属性没有设置 {func_name}.setter 装饰器的话，该属性将不能被修改(只读属性)
-{% endtextcolor%}
+!!! info
+    如果属性没有设置 {func_name}.setter 装饰器的话，该属性将不能被修改(只读属性)
 
 
 ### 完整实例
 
-```
+``` python
 class UserItem(object):
 
     @property
@@ -107,7 +96,7 @@ user.age = 234
 
 ### 遗留代码
 
-```
+``` python
 class HistoryUserItem(object):
     def __init__(self):
         self._name = 'bearboy'
@@ -121,9 +110,10 @@ class HistoryUserItem(object):
         self._name = name
 ```
 
-这种类参数的访问和设置都显得较麻烦，但是通过看property装饰后就不一样了。
 
-将参数的get和set方法通过property装饰后，便可直接按照类属性的方式访问了。
+!!! info
+    这种类参数的访问和设置都显得较麻烦，但是通过看property装饰后就不一样了。
+    将参数的get和set方法通过property装饰后，便可直接按照类属性的方式访问了。
 
 
 
@@ -131,7 +121,7 @@ class HistoryUserItem(object):
 
 通过`property(get_name, set_name)` 改造参数 `_name`为类属性
 
-```
+``` python
 class HistoryUserItem(object):
     def __init__(self):
         self._name = 'bearboy'

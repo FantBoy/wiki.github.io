@@ -40,12 +40,6 @@ markdown_extensions:
 
 
 nav:
-  - Nginx:
-      - 1. uwsgi+django部署: Nginx/nginx_gunicorn_django_setting.md
-      - 2. server_names_hash_bucket: Nginx/nginx_server_names_hash.md
-      - 3. gunicorn+django部署: Nginx/nginx_gunicorn_django_setting.md
-  - MySQL:
-      - 1. 获取字段名: MySQL/mysql_get_items_name_of_tables.md
   - Linux:
       - 1. cp覆盖拷贝: Linux/cp_cover.md
       - 2. curl:
@@ -53,7 +47,13 @@ nav:
       - 3. 查询外网ip: Linux/Linux_get_external_network_ip.md
       - 4. 压缩包的分割与合并: Linux/linux_split_tar_and_untar.md
   - Git:
-      - 1. 基础命令: Git/git_common_commands.md
+      - 1. 撤销相关: Git/git_revoke_commands.md
+  - Nginx:
+      - 1. uwsgi+django部署: Nginx/nginx+uwsgi+django部署.md
+      - 2. server_names_hash_bucket: Nginx/nginx_server_names_hash.md
+      - 3. gunicorn+django部署: Nginx/nginx_gunicorn_django_setting.md
+  - MySQL:
+      - 1. 获取字段名: MySQL/mysql_get_items_name_of_tables.md
   - Python:
       - 1. 类的属性管理: Python/class-property.md
       - 2. 常量类: Python/constants_class.md
