@@ -1,5 +1,6 @@
-> 在web服务中，除了一些业务log意外，还需要有专门的db相关的log。在Django的服务中，db的执行时靠model来执行的，而model的执行内容对我们分析业务至关重要，
-本文主要介绍Django服务中，model如果将每一次的执行都输出到log文件中。
+!!! info ""
+    在web服务中，除了一些业务log意外，还需要有专门的db相关的log。在Django的服务中，db的执行时靠model来执行的，而model的执行内容对我们分析业务至关重要，
+    本文主要介绍Django服务中，model如果将每一次的执行都输出到log文件中。
 
 
 

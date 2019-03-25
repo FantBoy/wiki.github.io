@@ -46,8 +46,12 @@ nav:
           - 分析Http请求耗时: Linux/Curl指令分析Http请求耗时.md
       - 3. 查询外网ip: Linux/Linux_get_external_network_ip.md
       - 4. 压缩包的分割与合并: Linux/linux_split_tar_and_untar.md
+      - 5. du: Linux/linux_du.md
+      - 6. df: Linux/linux_df.md
+      - 7. top: Linux/linux_top.md
   - Git:
       - 1. 撤销相关: Git/git_revoke_commands.md
+      - 2. 关闭issue: Git/close_issue_by_commit.md
   - Nginx:
       - 1. uwsgi+django部署: Nginx/nginx+uwsgi+django部署.md
       - 2. server_names_hash_bucket: Nginx/nginx_server_names_hash.md

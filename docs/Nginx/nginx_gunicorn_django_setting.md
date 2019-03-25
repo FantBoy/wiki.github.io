@@ -1,19 +1,3 @@
----
-layout: post
-filename: nginx_gunicorn_django_setting
-title: nginx+gunicorn+django部署
-datetime: 2018-04-17 21:04:17
-description: 
-comments: true
-toc: true
-tags:
- - gunicorn
- - nginx
- 
-categories:
- - Nginx
- 
----
 
 ## gunicorn安装
 ``` shell

@@ -1,8 +1,9 @@
-> 实际开发中，经常遇到网络请求时延比较高的情况，在分析请求耗时分布的时候，Curl有一个特别有用的功能：测试请求的耗时分布。
-可以测试本地请求，也可以测试网络请求。
+!!! info ""
+    实际开发中，经常遇到网络请求时延比较高的情况，在分析请求耗时分布的时候，Curl有一个特别有用的功能：测试请求的耗时分布。
+    可以测试本地请求，也可以测试网络请求。
 
 
-!!! info " curl参数说明"
+!!! tip " curl参数说明"
     ``` shell
     [root@VM_196_194_centos _posts]# curl --help
      -w, --write-out FORMAT  What to output after completion
