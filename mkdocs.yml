@@ -69,4 +69,6 @@ nav:
           - phpstorm-keyboard: Tools/Jetbrains/phpstorm-keyboard.md
       - 2. Anaconda:
           - Mac下的包管理: Tools/Anaconda/mac-anaconda-包管理.md
+      - 3. Markdown:
+          - latex基本语法: Tools/Markdown/latex基本语法.md
 
