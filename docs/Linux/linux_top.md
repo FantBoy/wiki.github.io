@@ -6,4 +6,4 @@
 
 
 !!! success "查看包含指定关键字的进程的使用情况"
-    ```top -p $(pgrep -f -d, nginx)```
+    ```top -c -p $(pgrep -d',' -f nginx)```
