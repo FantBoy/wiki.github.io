@@ -58,6 +58,7 @@ nav:
       - 3. gunicorn+django部署: Nginx/nginx_gunicorn_django_setting.md
   - MySQL:
       - 1. 获取字段名: MySQL/mysql_get_items_name_of_tables.md
+      - 2. 设置字符集: MySQL/set_mysql_table_to_utf8.md
   - Python:
       - 1. 类的属性管理: Python/class-property.md
       - 2. 常量类: Python/constants_class.md
