@@ -64,6 +64,7 @@ nav:
       - 2. 常量类: Python/constants_class.md
       - 3. Django:
           - 为model添加自动化log: Python/Django/django-model-log.md
+      - 4. 获取10位13位时间戳: Python/get_timestamp.md
   - Tools:
       - 1. Jetbrains:
           - activation-code: Tools/Jetbrains/jetbrains-activation-code.md
